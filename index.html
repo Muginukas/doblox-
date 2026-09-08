@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASMR Tower Builder</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Prisijungimo ekranas -->
+  <div id="login-screen" class="screen">
+    <div class="login-box">
+      <h1>🧈 ASMR Tower Builder 🍿</h1>
+      <p>Statyk savo ASMR bokštą – rink monetas ir krauk detales!</p>
+      <input id="nickname-input" type="text" placeholder="Įvesk slapyvardį..." maxlength="20" autocomplete="off">
+      <button id="login-btn">Žaisti</button>
+    </div>
+  </div>
+
+  <!-- Žaidimo ekranas -->
+  <div id="game-screen" class="screen hidden">
+    <header class="hud">
+      <div class="hud-left">
+        <span id="player-name" class="player-name"></span>
+        <span id="owner-badge" class="owner-badge hidden">👑 OWNER</span>
+      </div>
+      <div class="hud-center">
+        <span class="coin-icon">🪙</span>
+        <span id="coin-count">0</span>
+      </div>
+      <div class="hud-right">
+        <span class="tower-icon">🗼</span>
+        <span id="tower-height">0</span> blokų
+        <button id="reset-btn" title="Naujas žaidimas">↺ Reset</button>
+      </div>
+    </header>
+
+    <main class="game-main">
+      <section class="click-area">
+        <h2>Paspausk, kad uždirbtum monetų</h2>
+        <button id="earn-btn" class="earn-btn">🧼<span class="earn-label">+1 🪙</span></button>
+      </section>
+
+      <section class="tower-area">
+        <h2>Tavo bokštas</h2>
+        <div id="tower" class="tower"></div>
+      </section>
+
+      <section class="shop-area">
+        <h2>Parduotuvė</h2>
+        <div id="shop" class="shop"></div>
+      </section>
+    </main>
+  </div>
+
+<script src="game.js"></script>
+</body>
+</html>
